@@ -1,0 +1,15 @@
+Indicators that a stack should be used:
+
+Last-In, First-Out (LIFO) Order: The most recently opened parenthesis must be closed first. This LIFO property is the defining characteristic of a stack.
+
+Checking Pairs: You need to match each closing bracket with the last seen unmatched opening bracket. A stack allows you to efficiently track this by simply looking at the top of the stack without inspecting the rest of the elements.
+
+Nested Structure: Nested structures are inherently stack-like — you enter one level of nesting before exiting the previous level, much like stacking trays.
+
+Backtracking: When parsing the string left-to-right, you might need to backtrack to find the most recent opening bracket that matches a closing bracket. A stack allows you to "pop off" elements to backtrack.
+
+Elimination of Closed Pairs: Once a set of parentheses is balanced and closed, it does not affect the balancing of the rest of the string. A stack naturally discards these closed pairs by popping them out, which aligns with the problem's requirements.
+
+Subproblem Isolation: With stacks, once you encounter a closing bracket, you deal with the subproblem of finding the matching opening bracket, and the stack provides a natural way to isolate and handle these subproblems.
+
+Simplicity and Intuitiveness: Conceptually, when checking for balance, it feels natural to "push" when you start something (like opening a bracket) and "pop" when you finish it (like closing a bracket).
